@@ -11,14 +11,14 @@ class TopRestaurants extends React.Component {
 
     componentDidMount() {
         axios
-            .get('http://localhost:8080/restaurant/latest')
+            .get('http://localhost:8080/review/latest')
             .then((result) => {
                 console.log(result.data);
                 return result.data;
             })
             .then((data) => {
                 this.setState({restaurants: data})
-                console.log("state was set");
+                console.log("state was set resturant");
             })
             .catch((error) => {
                 console.log("ERROR " + error)
