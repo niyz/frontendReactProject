@@ -8,7 +8,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,3 +20,10 @@
 .App-link {
   color: #09d3ac;
 }
+
+.Header-button {
+  color: #ffffff;
+  height: 60px;
+  width: 80px;
+}
+
