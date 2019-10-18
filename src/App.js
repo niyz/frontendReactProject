@@ -8,17 +8,16 @@ import Navbar from './containers/Header/Navbar';
 //Rename header -> ReviewContainer
 
 class App extends React.Component {
-  render() {
-    return (
-      <div className="App container"> 
-        <Navbar></Navbar>
-        <ReviewList></ReviewList>
-        
-          <TopRestaurants></TopRestaurants>
-      </div>
+    render() {
+        return (
+            <div className="App container">
+                <Navbar></Navbar>
+                <ReviewList></ReviewList>
+                <TopRestaurants></TopRestaurants>
+            </div>
 
-    ); 
-  }
+        );
+    }
 }
 
 export default App;
