@@ -1,17 +1,31 @@
 import React, { useState } from 'react';
 import {Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
+const axios = require('axios')
 
 export default function Register(props) {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const [email, setEmail] = useState("");
+    const [userName, setUsername] = useState("");
+    const [passWord, setPassword] = useState("");
+    const [eMail, setEmail] = useState("");
     
     function validateForm() {
-        return username.length > 0 && password.length > 0 && email.length > 0;
+        return userName.length > 0 && passWord.length > 0 && eMail.length > 0;
     }
 
     function handleSubmit(event) {
         event.preventDefault();
+        console.log(passWord)
+        axios
+        .post('http://localhost:8080/user/create', {
+            username: userName,
+            password: passWord,
+            email: eMail
+        })
+        .then(function (response) {
+            console.log(response)
+        })
+        .catch(function (error) {
+            console.log(error)
+        })
     }
     return (
         <div className="Register">
@@ -21,7 +35,7 @@ export default function Register(props) {
                     <FormControl
                         autoFocus
                         type="email"
-                        value={email}
+                        value={eMail}
                         onChange={e => setEmail(e.target.value)}
                         />
                 </FormGroup>
@@ -30,7 +44,7 @@ export default function Register(props) {
                     <FormLabel>Username</FormLabel>
                     <FormControl
                         type="username"
-                        value={username}
+                        value={userName}
                         onChange={e => setUsername(e.target.value)}
                         />
                 </FormGroup>
@@ -38,7 +52,7 @@ export default function Register(props) {
                     <FormLabel>password</FormLabel>
                     <FormControl
                         type="password"
-                        value={password}
+                        value={passWord}
                         onChange={e => setPassword(e.target.value)}
                         />
                 </FormGroup>
