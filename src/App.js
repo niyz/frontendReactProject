@@ -15,7 +15,7 @@ class App extends React.Component {
                 <Navbar></Navbar>
                 <ReviewList></ReviewList>
                 <TopRestaurants></TopRestaurants>
-                <Register></Register>
+
             </div>
 
         );
