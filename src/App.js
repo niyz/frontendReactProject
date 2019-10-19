@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ReviewList from './containers/ReviewList/ReviewList';
 import TopRestaurants from "./containers/TopRestaurants/TopRestaurants";
 import Navbar from './containers/Header/Navbar';
+import Register from './containers/Register/Register';
 
 //Rename header -> ReviewContainer
 
@@ -14,6 +15,7 @@ class App extends React.Component {
                 <Navbar></Navbar>
                 <ReviewList></ReviewList>
                 <TopRestaurants></TopRestaurants>
+                <Register></Register>
             </div>
 
         );
