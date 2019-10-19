@@ -11,7 +11,7 @@ class TopRestaurants extends React.Component {
 
     componentDidMount() {
         axios
-            .get('http://localhost:8080/review/latest')
+            .get('http://localhost:8080/restaurant/latest/')
             .then((result) => {
                 console.log(result.data);
                 return result.data;

@@ -8,7 +8,7 @@ const RestaurantCard = (props) => {
                     <h4 className="card-title">{props.resturantId}</h4>
                     <p>Name: {props.name}</p>
                     <p>Address: {props.address}</p>
-                    <p>Category: {props.description }</p>
+                    <p>Category: {props.category }</p>
                     <p>Description: {props.description}</p>
                 </div>
             </div>
