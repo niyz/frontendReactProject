@@ -16,7 +16,7 @@ class ReviewList extends React.Component {
       })
       .then((data) => {
         this.setState({ reviews: data })
-        console.log("state was set");
+        console.log("state was set review");
       })
       .catch((error) => {
         console.log("ERROR: " + error)
