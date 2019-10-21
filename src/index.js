@@ -6,6 +6,7 @@ import App from './App.js';
 import * as serviceWorker from './serviceWorker';
 import Register from './containers/Register/Register';
 import Test from './components/Test/test';
+import ShowRestaurant from "./pages/Restaurante/ShowRestaurant";
 
 const routing = (
     ReactDOM.render(
@@ -14,11 +15,12 @@ const routing = (
             <Route exact path="/" exact component={App} />
             <Route path="/register" exact component={Register} />
             <Route path="/test" exact component={Test} />
+            <Route path="/restaurant/:id?" exact component={ShowRestaurant}/>
         </div>
     </Router>,
     document.getElementById('root')
 ),
-        <Route path="/restaurant/:id?" exact component={ShowRestaurant}/>
+
 
 
 // If you want your app to work offline and load faster, you can change

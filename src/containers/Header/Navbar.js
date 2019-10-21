@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
 import './Navbar.css';
-<<<<<<< Updated upstream
-import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
-
-
-=======
->>>>>>> Stashed changes
-
 
 class Navbar extends Component {
 

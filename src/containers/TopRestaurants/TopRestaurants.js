@@ -3,6 +3,8 @@ import React from 'react';
 import RestaurantCard from "../../components/RestaurantCard/RestaurantCard";
 
 const axios = require('axios');
+var counter = 0;
+
 
 class TopRestaurants extends React.Component {
     state = {
