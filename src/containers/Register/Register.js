@@ -21,9 +21,11 @@ export default function Register(props) {
             email: eMail
         })
         .then(function (response) {
+           // alert("You are now registered")
             console.log(response)
         })
         .catch(function (error) {
+          //  alert("User already exist")
             console.log(error)
         })
     }

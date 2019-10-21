@@ -97,16 +97,14 @@ class Navbar extends Component {
             <input className="form-control mr-sm-2" aria-label="Search" type="search" name="username" placeholder="Username" checked={this.state.username} onChange={this.changeEvent} />
             <input className="form-control mr-sm-2" aria-label="Search" type="password" name="password" placeholder="Password" checked={this.state.password} onChange={this.changeEvent}/>
             <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-            </form>
-
-            <form className="form-inline">
             <Button classname ="btn btn-outline-success my-2 my-sm-0" component={Link} to="/register">
               <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Register</button>
-            </Button>     
+            </Button>   
+            </form>
+
+           <form className="form-inline">   
            <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-
-
             </form>
 
           <a className="navbar-brand logout" href="/session/destroy" onClick={this.destroySession}>Logout</a>
