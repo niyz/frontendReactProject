@@ -2,7 +2,6 @@ import React from 'react';
 import RestaurantCard from "../../components/RestaurantCard/RestaurantCard";
 
 const axios = require('axios');
-var counter =0;
 
 class TopRestaurants extends React.Component {
     state = {
@@ -13,27 +12,24 @@ class TopRestaurants extends React.Component {
         axios
             .get('http://localhost:8080/restaurant/latest/')
             .then((result) => {
-                console.log(result.data);
                 return result.data;
             })
             .then((data) => {
                 this.setState({restaurants: data})
-                console.log("state was set resturant");
             })
             .catch((error) => {
                 console.log("ERROR " + error)
             })
     }
     render() {
-        counter++;
-        console.log(counter);
-        const cards = this.state.restaurants.map(value2 => (
+        const cards = this.state.restaurants.map(value => (
             <RestaurantCard
-                restaurantId={value2.restaurant_id}
-                name={value2.name}
-                address={value2.address}
-                category={value2.category}
-                description={value2.description}
+                key={value.restaurant_id}
+                restaurantId={value.restaurant_id}
+                name={value.name}
+                address={value.address}
+                category={value.category}
+                description={value.description}
 
             />
 

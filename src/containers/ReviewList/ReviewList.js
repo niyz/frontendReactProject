@@ -11,12 +11,10 @@ class ReviewList extends React.Component {
       axios
       .get('http://localhost:8080/review/latest')
       .then((result) => {
-        console.log(result.data);
         return result.data
       })
       .then((data) => {
         this.setState({ reviews: data })
-        console.log("state was set review");
       })
       .catch((error) => {
         console.log("ERROR: " + error)
@@ -26,8 +24,8 @@ class ReviewList extends React.Component {
     render() {
       const cards = this.state.reviews.map(value => (
         <ReviewCard
+          key={value.review_id} 
           reviewId={value.review_id}
-          rating={value.rating}
           reviewText={value.review_text}
           createdAt={value.created_at}
           updatedAt={value.updated_at}
