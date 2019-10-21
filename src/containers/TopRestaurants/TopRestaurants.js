@@ -1,4 +1,5 @@
 import React from 'react';
+
 import RestaurantCard from "../../components/RestaurantCard/RestaurantCard";
 
 const axios = require('axios');
@@ -27,13 +28,13 @@ class TopRestaurants extends React.Component {
     render() {
         counter++;
         console.log(counter);
-        const cards = this.state.restaurants.map(value2 => (
+        const restuaranteCards = this.state.restaurants.map(value => (
             <RestaurantCard
-                restaurantId={value2.restaurant_id}
-                name={value2.name}
-                address={value2.address}
-                category={value2.category}
-                description={value2.description}
+                restaurantId={value.restaurant_id}
+                name={value.name}
+                address={value.address}
+                category={value.category}
+                description={value.description}
 
             />
 
@@ -45,7 +46,8 @@ class TopRestaurants extends React.Component {
                 <h4>Resturants</h4>
                 <hr/>
                 <div className="row">
-                    { cards }
+                    { console.log("in row") }
+                    { restuaranteCards }
                 </div>
             </React.Fragment>
 
